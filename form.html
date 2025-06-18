@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<form>
+  1st Number: <input type="text" id="first"><br>
+  2nd Number: <input type="text" id="second"><br>
+  <input type="button" onclick="multiplyBy()" value="Multiply">
+  <input type="button" onclick="divideBy()" value="Divide">
+</form>
+<p id="result"></p>
+
+<script>
+function multiplyBy() {
+  let a = document.getElementById("first").value;
+  let b = document.getElementById("second").value;
+  document.getElementById("result").innerHTML = a * b;
+}
+function divideBy() {
+  let a = document.getElementById("first").value;
+  let b = document.getElementById("second").value;
+  document.getElementById("result").innerHTML = a / b;
+}
+</script>
+
+</html>
