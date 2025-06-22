@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Rectangular Shape</title></head>
+<body>
+<canvas id="rectCanvas" width="200" height="200" style="background:black;"></canvas>
+<script>
+  const canvas = document.getElementById('rectCanvas');
+  const ctx = canvas.getContext('2d');
+
+  // Inner filled rectangle
+  ctx.fillStyle = "white";
+  ctx.fillRect(50, 50, 100, 100);
+
+  // Inner border rectangle
+  ctx.strokeStyle = "black";
+  ctx.strokeRect(60, 60, 80, 80);
+</script>
+</body>
+</html>

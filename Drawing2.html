@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Circle</title></head>
+<body>
+<canvas id="circleCanvas" width="200" height="200" style="border:1px solid #000;"></canvas>
+<script>
+  const canvas = document.getElementById('circleCanvas');
+  const ctx = canvas.getContext('2d');
+  ctx.beginPath();
+  ctx.arc(100, 100, 60, 0, 2 * Math.PI);
+  ctx.strokeStyle = "red";
+  ctx.stroke();
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>   
+<html>
+<head>   
+  <meta charset="utf-8" />   
+</head>   
+<body>   
+  <p>
+    <a id="w3r" type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="http://www.w3resource.com/">
+      w3resource
+    </a>
+  </p>   
+  <button onclick="getAttributes()">Click here to get attributes value</button>   
+
+  <script>
+    function getAttributes() {
+    const link = document.getElementById("w3r");
+    const attrs = ["href", "hreflang", "rel", "target", "type"];
+    attrs.forEach(attr => alert(attr + ": " + link.getAttribute(attr)));
+}
+  </script>
+</body>
+</html>

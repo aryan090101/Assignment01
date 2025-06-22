@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smiley Face</title>
+</head>
+<body>
+<canvas id="smileyCanvas" width="200" height="200" style="border:1px solid #000;"></canvas>
+
+<script>
+  const canvas = document.getElementById("smileyCanvas");
+  const ctx = canvas.getContext("2d");
+
+  // Face
+  ctx.beginPath();
+  ctx.arc(100, 100, 75, 0, Math.PI * 2, true); // Outer circle
+  ctx.stroke();
+
+  // Mouth
+  ctx.beginPath();
+  ctx.arc(100, 100, 50, 0, Math.PI, false);  // Mouth (clockwise)
+  ctx.stroke();
+
+  // Left eye
+  ctx.beginPath();
+  ctx.moveTo(75, 75);
+  ctx.arc(75, 75, 5, 0, Math.PI * 2, true);  // Left eye
+  ctx.stroke();
+
+  // Right eye
+  ctx.beginPath();
+  ctx.moveTo(125, 75);
+  ctx.arc(125, 75, 5, 0, Math.PI * 2, true);  // Right eye
+  ctx.stroke();
+  
+  ctx.moveTo(75,75);
+  ctx.lineTo(125,75);
+  ctx.stroke();
+
+
+</script>
+</body>
+</html>
