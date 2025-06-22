@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>UTC Time</title></head>
+<body>
+  <button onclick="convertToUTC()">Show UTC</button>
+  <div id="utcResult"></div>
+  <button onclick="startTimer()">Start Timer</button>
+  <div id="timerResult"></div>
+
+<script>
+function convertToUTC() {
+  const now = new Date();
+  document.getElementById("utcResult").innerText = now.toUTCString();
+}
+
+function startTimer() {
+  setTimeout(() => {
+    document.getElementById("timerResult").innerText = new Date().toLocaleString();
+  }, 3000);
+}
+</script>
+</body>
+</html>

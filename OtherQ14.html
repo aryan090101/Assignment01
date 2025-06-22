@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="visitInfo"></div>
+<script>
+let visits = parseInt(localStorage.getItem("visits")) || 0;
+let lastVisit = localStorage.getItem("lastVisit");
+visits++;
+localStorage.setItem("visits", visits);
+localStorage.setItem("lastVisit", new Date());
+document.getElementById("visitInfo").innerHTML = 
+  "You have visited " + visits + " times.<br>" + 
+  (lastVisit ? "Your last visit was on " + lastVisit : "You have never visited before.");
+</script>
+</body>
+</html>

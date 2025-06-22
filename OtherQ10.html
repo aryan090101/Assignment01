@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><style>
+#marble { width: 50px; height: 50px; background: red; border-radius: 50%; position: absolute; }
+</style></head>
+<body>
+<div id="marble"></div>
+
+<script>
+let marble = document.getElementById("marble");
+let pos = 0;
+let interval;
+
+function animate() {
+  interval = setInterval(() => {
+    marble.style.left = pos++ + 'px';
+  }, 30);
+}
+
+marble.addEventListener("mouseover", () => clearInterval(interval));
+marble.addEventListener("mouseout", animate);
+
+animate();
+</script>
+</body>
+</html>

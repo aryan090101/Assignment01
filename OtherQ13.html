@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form onsubmit="return validateForm()">
+  Name: <input type="text" id="name"><br>
+  Email: <input type="email" id="email"><br>
+  <input type="submit">
+</form>
+<script>
+function validateForm() {
+  if (!document.getElementById("name").value || !document.getElementById("email").value) {
+    alert("All fields required!");
+    return false;
+  }
+  return true;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button id="back" onclick="prev()" style="display:none">Back</button>
+<img id="slide" src="img1.jpg" width="300">
+<button id="next" onclick="next()">Next</button>
+
+<script>
+let images = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg"];
+let index = 0;
+
+function updateButtons() {
+  document.getElementById("back").style.display = index === 0 ? "none" : "inline";
+  document.getElementById("next").style.display = index === images.length - 1 ? "none" : "inline";
+}
+
+function next() {
+  if (index < images.length - 1) index++;
+  document.getElementById("slide").src = images[index];
+  updateButtons();
+}
+
+function prev() {
+  if (index > 0) index--;
+  document.getElementById("slide").src = images[index];
+  updateButtons();
+}
+
+updateButtons();
+</script>
+</body>
+</html>

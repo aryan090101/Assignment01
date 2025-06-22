@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>First paragraph.</p>
+<p id="insertAfter">Second paragraph.</p>
+
+<script>
+const newPara = document.createElement("p");
+newPara.textContent = "This is the new paragraph.";
+document.body.insertBefore(newPara, document.getElementById("insertAfter"));
+
+newPara.addEventListener("mouseover", () => {
+  newPara.style.color = "red";
+});
+
+newPara.addEventListener("mouseout", () => {
+  newPara.style.color = "";
+});
+</script>
+</body>
+</html>
